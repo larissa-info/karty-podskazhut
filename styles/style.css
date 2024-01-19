@@ -7,6 +7,9 @@
 .page {
   min-inline-size: 360px;
   margin: 0;
+  background-color: var(--bg-color, #f3efec);
+  color: var(--text-color, #312a4e);
+  font-family: var(--main-font, sans-serif);
 }
 
 p,
@@ -34,13 +37,6 @@ button:focus {
   --accent-color: #ffab6b;
   --main-font: "Raleway", sans-serif;
   --accent-font: "STIXTwoText", serif;
-}
-
-.page {
-  background-color: var(--bg-color, #f3efec);
-  color: var(--text-color, #312a4e);
-  font-family: var(--main-font, sans-serif);
-  width: clamp(360px 100% 1440px);
 }
 
 .heading {
@@ -118,7 +114,7 @@ li:not(:last-child) {
   background-repeat: no-repeat;
   object-position: center;
   position: absolute;
-  left: -20px;
+  left: -25px;
 }
 
 .theme_dark .content__list-item::before {
@@ -152,6 +148,8 @@ li:not(:last-child) {
   margin-right: 1px;
   font-weight: 700;
   font-size: 30px;
+  background-color: transparent;
+  border: 1px solid #B3B3B3;
 }
 
 .content__figure {
@@ -199,8 +197,8 @@ li:not(:last-child) {
 .colored-text::after {
   content: "";
   position: absolute;
-  width: 3.5em;
-  height: 0.3em;
+  width: 3.66em;
+  height: 0.25em;
   background-color: var(--accent-color, #ffab6b);
   z-index: -1;
   left: calc(50% - 0.2em);
@@ -219,6 +217,8 @@ li:not(:last-child) {
   padding-bottom: 20px;
   flex-direction: row;
   justify-content: space-between;
+  border-top: 1px solid var(--text-color);
+border-bottom: 1px solid var(--text-color);
 }
 
 .header__theme-toggler {
@@ -239,10 +239,14 @@ li:not(:last-child) {
   position: relative;
 }
 
-.header__theme-button_type_dark {
+.header__theme-button_type_dark:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.header__theme-button_type_light {
+.header__theme-button_type_light:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .header__theme-button_is-active {
@@ -253,7 +257,7 @@ li:not(:last-child) {
   content: "";
   position: absolute;
   width: 4.5em;
-  height: 0.3em;
+  height: 0.4em;
   background-color: var(--accent-color, #ffab6b);
   z-index: -1;
   top: 0.6em;
@@ -261,14 +265,10 @@ li:not(:last-child) {
 }
 
 .theme_dark .header__theme-button_is-active::after {
-  background-image: url(./images/pattern.svg);
+  background-image: url(../images/pattern.svg);
 }
 
 a:hover {
-  cursor: pointer;
-}
-
-.header__theme-button:hover {
   cursor: pointer;
 }
 
