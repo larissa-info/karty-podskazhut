@@ -41,7 +41,7 @@ button:focus {
 
 .page {
   min-inline-size: 360px;
-  margin: 0;
+  margin: 0 auto;
   background-color: var(--bg-color, #f3efec);
   color: var(--text-color, #312a4e);
   font-family: var(--main-font, sans-serif);
@@ -58,11 +58,10 @@ button:focus {
 .content-section {
   padding-left: 5vi;
   padding-right: 5vi;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .header__title {
+  font-family: var(--accent-font, serif);
   font-size: clamp(3.75rem, 2.5rem + 5.5556vw, 7.5rem);
   padding-bottom: 40px;
 }
@@ -139,6 +138,7 @@ li:not(:last-child) {
   padding-left: 4px;
   padding-right: 4px;
   margin-right: 1px;
+  margin-left: -4px;
   font-weight: 700;
   font-size: 30px;
 }
@@ -148,7 +148,6 @@ li:not(:last-child) {
   .content__paragraph:first-child::first-letter {
   background-color: transparent;
   border: 1px solid #b3b3b3;
-  margin-right: 4px;
 }
 
 .content__figure {
@@ -176,7 +175,7 @@ li:not(:last-child) {
 .content__card {
   width: 100%;
   display: flex;
-  aspect-ratio: 4 /3;
+  aspect-ratio: 4 / 3;
   margin-top: 7%;
   border: 1px solid currentColor;
   flex-direction: column;
@@ -205,8 +204,8 @@ li:not(:last-child) {
   height: 0.25em;
   background-color: var(--accent-color, #ffab6b);
   z-index: -1;
-  left: calc(50% - 1.75em);
-  top: calc(50% + 0.14em);
+  left: calc(50% - 1.82em);
+  top: calc(50% + 0.05em);
 }
 
 .theme_dark .colored-text::after {
@@ -236,7 +235,7 @@ li:not(:last-child) {
   display: flex;
   list-style-type: none;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 8px;
 }
 
 .header__theme-toggler li {
@@ -253,6 +252,10 @@ li:not(:last-child) {
   line-height: 104%;
   background-color: inherit;
   position: relative;
+}
+
+.header__theme-button_type_light {
+  margin-right: -5px;
 }
 
 .header__theme-button_type_dark:hover {
