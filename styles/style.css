@@ -110,6 +110,9 @@ button:focus {
 
 .content__list-item {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 li:not(:last-child) {
@@ -147,7 +150,7 @@ li:not(:last-child) {
   .content__text-block_type_first-lettered
   .content__paragraph:first-child::first-letter {
   background-color: transparent;
-  border: 1px solid #b3b3b3;
+  border: 1px solid var(--text-color, #b3b3b3);
 }
 
 .content__figure {
@@ -166,6 +169,10 @@ li:not(:last-child) {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+}
+
+.theme_dark .content__picture-caption {
+  border-bottom: 1px solid var(--text-color, #b3b3b3);
 }
 
 .content__picture {
@@ -227,8 +234,8 @@ li:not(:last-child) {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--text-color);
-  border-bottom: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color, #312a4e);
+  border-bottom: 1px solid var(--text-color, #312a4e);
 }
 
 .header__theme-toggler {
@@ -245,7 +252,7 @@ li:not(:last-child) {
 .header__theme-button {
   border-style: none;
   font-family: inherit;
-  color: var(--text-color);
+  color: var(--text-color, #312a4e);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -293,11 +300,11 @@ a:hover {
 }
 
 a:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #312a4e);
 }
 
 .header__theme-button:focus-visible {
-  outline: 1px solid var(--text-color);
+  outline: 1px solid var(--text-color, #312a4e);
 }
 
 .header__theme-button:disabled {
@@ -305,10 +312,10 @@ a:focus-visible {
 }
 
 .footer {
-  border-top: 1px solid var(--text-color);
-  color: var(--text-color);
+  border-top: 1px solid var(--text-color, #312a4e);
+  color: var(--text-color, #312a4e);
   text-align: center;
-  font-family: var(--main-font);
+  font-family: var(--main-font, sans-serif);
   margin-top: 10%;
   padding: 2.5%;
 }
